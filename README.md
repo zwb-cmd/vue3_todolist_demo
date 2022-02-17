@@ -1,3 +1,14 @@
+项目说明
+![image](https://user-images.githubusercontent.com/62594022/154416003-a92df5bc-75e5-4376-8bff-a09de3a3ca7a.png)
+1.enter添加，
+2.dblclick修改，enter保存
+3.删除
+4.任务状态
+5.清除已完成任务
+6.是否全选
+7.数据存储在本地
+8.项目支持id唯一或引用地址唯一
+
 import { ref,reactive,watch,watchEffect,computed,shallowRef,shallowReadonly,shallowReactive,readonly,toRef,toRefs,toRaw,markRaw,provide,inject } from "vue";
 // ref简单类型响应式数据
 // reactive简单类型响应式数据
