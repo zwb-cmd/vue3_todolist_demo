@@ -1,26 +1,58 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Vue3Todolist />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { reactive } from 'vue'
+import Vue3Todolist from './components/vue3Todolist.vue';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  components:{
+    Vue3Todolist,
+  },
+  setup(){
+    let data = reactive({
+      mydata:{
+        a:1,
+      },
+      name:'',
+      sex:'男',
+      arr:[],
+      
+    })
+    data.mydata.a = 1234
+
+
+   /*  let p  = {
+      a:1,
+      b:2,
+    }
+    // vue3响应式
+    new Proxy(p,{
+      get(target,key){
+        console.log(target,key)
+        return Reflect.get(target,key)
+      },
+      set(target,key,value){
+        console.log(target,key)
+        return Reflect.set(target,key,value)
+      },
+      deleteProperty(target,key){
+        console.log(target,key)
+        delete Reflect.deleteProperty(target,key)
+      }
+    }) */
+    data.showName =()=>{
+        console.log('123123')
+      }
+    return {
+      ...data
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
